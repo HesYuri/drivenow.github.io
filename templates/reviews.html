@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+{% block title %}Отзывы — DriveNow{% endblock %}
+{% block content %}
+<section class="container section">
+    <h1>Отзывы клиентов</h1>
+    <div class="reviews">
+        {% for r in reviews %}
+        <div class="review">
+            <div class="review__head">
+                <strong>{{ r.author }}</strong>
+                <span class="date">{{ r.date }}</span>
+            </div>
+            <div class="stars">{{ "★" * r.rating }}{{ "☆" * (5 - r.rating) }}</div>
+            <p>{{ r.text }}</p>
+        </div>
+        {% endfor %}
+    </div>
+</section>
+{% endblock %}

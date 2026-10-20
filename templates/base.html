@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}DriveNow — аренда авто{% endblock %}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <header class="header">
+        <div class="container header__inner">
+            <a href="/" class="logo">🚗 Drive<span>Now</span></a>
+            <nav class="nav">
+                <a href="{{ url_for('about') }}" class="{{ 'active' if active == 'about' }}">О нас</a>
+                <a href="{{ url_for('fleet') }}" class="{{ 'active' if active == 'fleet' }}">Автопарк</a>
+                <a href="{{ url_for('rules') }}" class="{{ 'active' if active == 'rules' }}">Правила аренды</a>
+                <a href="{{ url_for('reviews') }}" class="{{ 'active' if active == 'reviews' }}">Отзывы</a>
+                <a href="{{ url_for('contacts') }}" class="{{ 'active' if active == 'contacts' }}">Как добраться</a>
+            </nav>
+            <a href="tel:+70000000000" class="phone">+7 (000) 000-00-00</a>
+        </div>
+    </header>
+
+    <main>
+        {% block content %}{% endblock %}
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>© 2026 DriveNow. Аренда автомобилей без лишних хлопот.</p>
+            <p class="small">Фотографии автомобилей: Wikimedia Commons (свободные лицензии).</p>
+        </div>
+    </footer>
+</body>
+</html>
