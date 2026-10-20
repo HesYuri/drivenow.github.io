@@ -101,7 +101,7 @@ h2 { margin-top: 40px; }
 /* Подвал */
 .footer { background: #1e2a38; color: #cfd8e3; text-align: center; padding: 24px 0; }
 .footer .small { font-size: 12px; color: #8090a3; margin-top: 4px; }
-
+.counters { display: flex; justify-content: center; align-items: center; gap: 8px; margin-top: 12px; flex-wrap: wrap; }
 /* Адаптив */
 @media (max-width: 900px) {
     .header__inner { flex-direction: column; padding: 12px 20px; }
